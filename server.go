@@ -127,7 +127,7 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("Operate success!")
 			latest = File_Target
 			w.Header().Add("Content-Type", "text/html")
-			w.WriteHeader(200)		
+			w.WriteHeader(200)
 			html1 := `{"status":"success","target":"` + File_Target + `.bin"}`
 			io.WriteString(w, html1)
 		} else {
